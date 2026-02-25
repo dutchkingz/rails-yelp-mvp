@@ -3,6 +3,7 @@ class Review < ApplicationRecord
 
   validates :content, :rating, presence: true
   # validates :rating, inclusion: { in: [ 1, 2, 3, 4, 5 ] }
+  # in: (0..5)
   validates :rating, numericality: {
     only_integer: true,
     greater_than_or_equal_to: 0,
